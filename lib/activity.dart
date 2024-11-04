@@ -35,6 +35,9 @@ class _ActivityState extends State<Activity> {
   }
 
   void _Tap(int index) {
+    if (isVinner()) {
+      return;
+    }
     if (containers[index] == '') {
       setState(() {
         containers[index] = turn;
